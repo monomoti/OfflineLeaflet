@@ -11,6 +11,8 @@ $(function(){
 	var baseLayer = new L.TileLayer.AndroidMBTiles('', {tms:true,minZoom:4, maxZoom: 10,attribution: attribution});
 	map = L.map('map',{minZoom:4,maxZoom:10}).setView([centerLat,centerLng], zoom).addLayer(baseLayer);
 	
+	L.control.scale({position:"topright"}).addTo(map);
+	
 	map.invalidateSize();
 });
 
